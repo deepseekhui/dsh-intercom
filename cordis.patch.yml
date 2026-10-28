@@ -6,7 +6,7 @@
 
 - insert:
     - id: intercom
-      name: 'dsh-intercom'
+      name: '@deepseekhui/dsh-intercom'
       config:
         # 一个窗口内最多送几次
         maxPerWindow: 10

@@ -41,7 +41,7 @@
 ### 一、从 GitHub 装（最省事）
 
 ```bash
-npx @deepseek-ai/dsh plugin --profile <profile 名> add github:<你的 GitHub 名>/dsh-intercom
+npx @deepseek-ai/dsh plugin --profile <profile 名> add github:deepseekhui/dsh-intercom
 ```
 
 装完重启 dsh。
@@ -52,10 +52,11 @@ npx @deepseek-ai/dsh plugin --profile <profile 名> add github:<你的 GitHub �
 ```bash
 # 1. 把本包放到 <DSH_HOME>/plugins/dsh-intercom
 # 2. profile 的 package.json 里加两条
-#      dependencies:  "dsh-intercom": "link:../../plugins/dsh-intercom"
-#      dsh.profile.bundles: 追加 "dsh-intercom"
+#      dependencies:  "@deepseekhui/dsh-intercom": "link:../../plugins/dsh-intercom"
+#      dsh.profile.bundles: 追加 "@deepseekhui/dsh-intercom"
 # 3. 软链
-ln -s ../../../plugins/dsh-intercom <DSH_HOME>/profiles/<名字>/node_modules/dsh-intercom
+mkdir -p <DSH_HOME>/profiles/<名字>/node_modules/@deepseekhui
+ln -s ../../../../plugins/dsh-intercom <DSH_HOME>/profiles/<名字>/node_modules/@deepseekhui/dsh-intercom
 # 4. 重启 dsh
 ```
 

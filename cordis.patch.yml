@@ -1,0 +1,14 @@
+# 对讲机（intercom）：把一个会话的话送进另一个会话。
+#
+# ⚠️ 顶层必须是 YAML 数组。
+# ⚠️ 限流是给自己上的锁：两个 AI 会互相答话，没人喊停，一晚上能把额度烧光。
+#    默认一个窗口（60 分钟）最多 10 次，用完就停，得等窗口过去。
+
+- insert:
+    - id: intercom
+      name: 'dsh-intercom'
+      config:
+        # 一个窗口内最多送几次
+        maxPerWindow: 10
+        # 窗口多长（分钟）
+        windowMinutes: 60

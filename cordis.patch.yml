@@ -12,3 +12,5 @@
         maxPerWindow: 10
         # 窗口多长（分钟）
         windowMinutes: 60
+        # 设置页顶上那行小字。默认「会话之间」；两头发言人各有名字时写这里。
+        label: ''

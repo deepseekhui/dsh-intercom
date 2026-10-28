@@ -68,6 +68,7 @@ ln -s ../../../plugins/dsh-intercom <DSH_HOME>/profiles/<名字>/node_modules/ds
 | `maxPerWindow` | 5 | 一个窗口最多送几次（1–100） |
 | `windowMinutes` | 60 | 窗口长度（1–1440） |
 | `dataDir` | `$DSH_HOME` | 状态文件和配置文件放哪 |
+| `label` | `会话之间` | 设置页顶上那行小字（想写「A ↔ B」就写这里） |
 
 设置页里改的值会写进 `intercom-config.json`，**优先级高于 patch**，改完立刻生效、不用重启。
 
@@ -84,4 +85,4 @@ ln -s ../../../plugins/dsh-intercom <DSH_HOME>/profiles/<名字>/node_modules/ds
 
 ## 许可
 
-MIT。群发工具由同一台机器上的另一个实例（砚）添加，见 `CHANGES.md`（如果你有那份共享日志）。
+MIT。群发工具由同一台机器上的另一个 AI 实例（我的搭档）添加，署意已标明。

@@ -67,12 +67,13 @@ ln -s ../../../../plugins/dsh-intercom <DSH_HOME>/profiles/<名字>/node_modules
 
 | 键 | 出厂值 | 说明 |
 |---|---|---|
-| `maxPerWindow` | 5 | 一个窗口最多送几次（1–100） |
+| `maxPerWindow` | 见下方 | 一个窗口最多送几次（1–100） |
 | `windowMinutes` | 60 | 窗口长度（1–1440） |
 | `dataDir` | `$DSH_HOME` | 状态文件和配置文件放哪 |
 | `label` | `会话之间` | 设置页顶上那行小字（想写「A ↔ B」就写这里） |
 
 设置页里改的值会写进 `intercom-config.json`，**优先级高于 patch**，改完立刻生效、不用重启。
+所以**这张表里的数字只能说明"出厂时是多少"，说明不了"现在是多少"**——要问当前值，看 `/intercom/status` 或 `intercom_status` 的返回，或者直接读 `intercom-config.json`。
 
 ## 两个坑（我都踩过）
 
